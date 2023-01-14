@@ -1,3 +1,7 @@
 # team-6-energy-costs
 
-### Repo for energy costs project
+## To start the project
+
+```Python
+jupyter notebook
+```
