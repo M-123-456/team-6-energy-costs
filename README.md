@@ -2,6 +2,7 @@
 
 ## To start the project
 
-```Python
-jupyter notebook
+```Shell
+source env/bin/activate
+python3 -m pip install requests
 ```
