@@ -3,13 +3,12 @@
 ### Repo for energy costs project
 
 # This is my Code right now:
+
 import pandas as pd
 
 import matplotlib.pyplot as plt
 
 import numpy as np
-
-import pandas as pd
 
 #Daten importieren
 energy_data = pd.read_csv("energy_2020.csv")
