@@ -11,7 +11,7 @@ git switch -c <your branch name>
 - install working environment
 
 ```Shell
-source env/bin/activate
+source venv/bin/activate
 python3 -m pip install requests
 ```
 
