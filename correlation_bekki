@@ -1,0 +1,40 @@
+import pandas as pd 
+import matplotlib.pyplot as plt
+
+
+
+'''Hier erstelle ich eine neue Spalte mit den Monaten als Wort'''
+energy_data['DatumUhrzeit'] = pd.to_datetime(energy_data['DatumUhrzeit'])
+energy_data['MonatName'] = energy_data['DatumUhrzeit'].dt.month_name()
+
+
+'''Hier erstelle ich eine neue Spalte mit den Monaten als Zahl um sie als Boxplot wiedergeben zu können'''
+energy_data['DatumUhrzeit'] = pd.to_datetime(energy_data['DatumUhrzeit'])
+energy_data['MonatZahl'] = energy_data['DatumUhrzeit'].dt.month
+
+
+'''Hier schaue ich nach der Korrelation zwischen Preis und allen Monaten ; corr = ca. 0.352877'''
+corr_number = energy_data['DayAheadAuktion'].corr(energy_data['MonatZahl'])
+
+
+'''Hier erstelle ich Boxplots mit der Korrelation zwischen Monat und Strompreis insgesamt'''
+energy_data[['DatumUhrzeit','MonatZahl']].boxplot()
+
+
+
+'''GroupBy Month = einzelne Korrelationen zwischen Monat und dem DataFrame '''
+corr_month = energy_data.groupby(energy_data["MonatZahl"]).corr()
+monthly_corr = pd.DataFrame(corr_month)
+print(monthly_corr.DayAheadAuktion)
+
+
+'''Hier habe ich versucht die Korrelation zwischen den einzelnen Monaten und ihren Strompreisen darzustellen, 
+aber es kommt nur 1.0 raus? Das kann ja nicht richtig sein??'''
+correlation = energy_data.groupby('MonatName')[['DayAheadAuktion']].apply(lambda x: x.corr())
+print(correlation)
+
+
+
+'''GroupBy Month = einzelne Boxplots für einzelne Monate und Preis'''
+energy_data.groupby(energy_data["DatumUhrzeit"].dt.month).boxplot(column='DayAheadAuktion')
+plt.show()
