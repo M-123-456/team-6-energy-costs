@@ -2,6 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+energy_data = pd.read_csv("D:/4TechLabs/team-6-energy-costs/data/energy-charts_Stromproduktion_und_Börsenstrompreise_in_Deutschland_2020_Excel.csv", sep=";")
+
+
+'''Um alle Daten im Terminal sehen zu können.'''
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+
+energy_data.rename(columns={"Datum (MT+1)": "DatumUhrzeit", "Import Saldo": "ImportSaldo",
+                            "Nicht Erneuerbar": "NichtErneuerbar",
+                            "Day Ahead Auktion (DE-LU)": "DayAheadAuktion"}, inplace=True)
+
 
 '''Hier erstelle ich eine neue Spalte mit den Monaten als Wort'''
 energy_data['DatumUhrzeit'] = pd.to_datetime(energy_data['DatumUhrzeit'])
@@ -13,28 +24,44 @@ energy_data['DatumUhrzeit'] = pd.to_datetime(energy_data['DatumUhrzeit'])
 energy_data['MonatZahl'] = energy_data['DatumUhrzeit'].dt.month
 
 
+
 '''Hier schaue ich nach der Korrelation zwischen Preis und allen Monaten ; corr = ca. 0.352877'''
 corr_number = energy_data['DayAheadAuktion'].corr(energy_data['MonatZahl'])
-
-
-'''Hier erstelle ich Boxplots mit der Korrelation zwischen Monat und Strompreis insgesamt'''
-energy_data[['DatumUhrzeit','MonatZahl']].boxplot()
 
 
 
 '''GroupBy Month = einzelne Korrelationen zwischen Monat und dem DataFrame '''
 corr_month = energy_data.groupby(energy_data["MonatZahl"]).corr()
 monthly_corr = pd.DataFrame(corr_month)
-print(monthly_corr.DayAheadAuktion)
+#print(monthly_corr.DayAheadAuktion)
 
 
-'''Hier habe ich versucht die Korrelation zwischen den einzelnen Monaten und ihren Strompreisen darzustellen, 
-aber es kommt nur 1.0 raus? Das kann ja nicht richtig sein??'''
-correlation = energy_data.groupby('MonatName')[['DayAheadAuktion']].apply(lambda x: x.corr())
-print(correlation)
+
+
+
+'''GroupBy Month und .describe() um Auffälligkeiten in den einzelnen Monaten zu finden. 
+Niedrigster Preis im April (-83.94), höchster Preis im September (200.04).
+Durchschnittspreise: im April und Mai (17 + 17.6) am niedrigsten, am höchsten im September + Dezember (43.6 + 43.5).
+Abstieg des Durchschnittswertes bis April (Jan = 34.9, April = 17.0), 
+Anschließend Anstieg bis September (Mai = 17.6, Sep = 43.6),
+Plötzliches Absinken + Anstieg (Okt = 33.9, Dez = 43.5)'''
+grouped = energy_data.groupby(energy_data['DatumUhrzeit'].dt.month)
+describe_month = grouped.describe()
+#print(describe_month)
+
+
+'''Spannweiten zwischen Max- und Min-Preis für einzelne Monate.
+--> Größte Spanne im September; Kleinste Spanne im Januar.'''
+preis_min = grouped['DayAheadAuktion'].min()
+preis_max = grouped['DayAheadAuktion'].max()
+spannweite = preis_max - preis_min
+#print(spannweite)
+
 
 
 
 '''GroupBy Month = einzelne Boxplots für einzelne Monate und Preis'''
 energy_data.groupby(energy_data["DatumUhrzeit"].dt.month).boxplot(column='DayAheadAuktion')
-plt.show()
+#plt.show()
+
+
