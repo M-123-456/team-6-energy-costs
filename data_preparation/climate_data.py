@@ -21,12 +21,12 @@ def save_prep_climate_data(wind_url, solar_url, save_url):
 save_prep_climate_data(
     '../data/raw/energy-charts_Windgeschwindigkeit_in_Deutschland_im_Jahr_2020_Excel.csv',
     '../data/raw/energy-charts_Globale_Solarstrahlung_in_Deutschland_im_Jahr_2020_Excel.csv',
-    '../data/prepared/df_climate_2020'
+    '../data/prepared/df_climate_2020.csv'
 )
 
 # 2021
 save_prep_climate_data(
     '../data/raw/energy-charts_Windgeschwindigkeit_in_Deutschland_im_Jahr_2021_Excel.csv',
     '../data/raw/energy-charts_Globale_Solarstrahlung_in_Deutschland_im_Jahr_2021_Excel.csv',
-    '../data/prepared/df_climate_2021'
+    '../data/prepared/df_climate_2021.csv'
 )

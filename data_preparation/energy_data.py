@@ -20,11 +20,11 @@ def save_prep_energy_data(data_url, save_url):
 # 2020
 save_prep_energy_data(
     '../data/raw/energy-charts_Stromproduktion_und_Börsenstrompreise_in_Deutschland_2020_Excel.csv',
-    '../data/prepared/df_energy_price_and_feeding_2020'
+    '../data/prepared/df_energy_price_and_feeding_2020.csv'
 )
 
 # 2021
 save_prep_energy_data(
     '../data/raw/energy-charts_Stromproduktion_und_Börsenstrompreise_in_Deutschland_2021_Excel.csv',
-    '../data/prepared/df_energy_price_and_feeding_2021'
+    '../data/prepared/df_energy_price_and_feeding_2021.csv'
 )
