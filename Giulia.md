@@ -32,3 +32,5 @@ energy_data.head(3)
 
 energy_data = energy_data[['Datum', 'Uhrzeit', 'DayAheadAuktion', 'Kernenergie', 'Nicht Erneuerbar', 'Erneuerbar']]
 energy_data.head(3)
+
+#irgendwas
