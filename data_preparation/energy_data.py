@@ -17,6 +17,12 @@ def save_prep_energy_data(data_url, save_url):
         index=False
     )
 
+# 2019
+save_prep_energy_data(
+    '../data/raw/energy-charts_Stromproduktion_und_Börsenstrompreise_in_Deutschland_2019_Excel.csv',
+    '../data/prepared/df_energy_2019.csv'
+)
+
 # 2020
 save_prep_energy_data(
     '../data/raw/energy-charts_Stromproduktion_und_Börsenstrompreise_in_Deutschland_2020_Excel.csv',
