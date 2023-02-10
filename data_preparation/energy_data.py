@@ -1,4 +1,5 @@
 import data_preparator 
+import pandas as pd
 
 def save_prep_energy_data(data_url, save_url):
 
@@ -10,6 +11,9 @@ def save_prep_energy_data(data_url, save_url):
 
     # add total energy feeding
     df_energy['total_energy_feeding'] = df_energy['nuclear_power'] +     df_energy['not_renewable'] + df_energy['renewable']
+
+    # datetime
+    df_energy['datetime'] = pd.to_datetime(df_energy['datetime'])
 
     # save as csv in data folder
     df_energy.to_csv(
