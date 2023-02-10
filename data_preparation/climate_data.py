@@ -8,6 +8,11 @@ def save_prep_climate_data(wind_url, solar_url, save_url):
 
     df_solar = data_preparator.clean_df_climate(solar_url)
 
+    # datetime
+    df_wind['datetime'] = pd.to_datetime(df_wind['datetime'])
+    df_solar['datetime'] = pd.to_datetime(df_solar['datetime'])
+
+
     # merge wind and sun data
     df_climate = pd.merge(df_wind, df_solar)
 
