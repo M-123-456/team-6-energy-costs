@@ -64,7 +64,10 @@ def clean_df_climate(url):
 
     if 'Windgeschwindigkeit' in url:
        df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'wind_speed'}, inplace=True)
-    else :
+    elif 'Solarstrahlung' in url:
         df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'solar_radiation'}, inplace=True)
+    else:
+        df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'tempreture'}, inplace=True)
+
     
     return df_climate
