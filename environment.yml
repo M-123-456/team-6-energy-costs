@@ -6,10 +6,8 @@ dependencies:
   - matplotlib
   - numpy
   - seaborn
-  - time
   - datetime
   - statsmodels
   - darts
-
 
 prefix: /Users/mikigerlach/opt/anaconda3/envs/Techlabs
