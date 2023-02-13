@@ -41,6 +41,8 @@ def add_date_week_time(df):
     df['day_of_week'] = df['datetime'].dt.day_name()
     # add time
     df['time'] = df['datetime'].dt.time
+    # add month
+    df['month'] = df['datetime'].dt.month
 
     return df
 
@@ -67,7 +69,7 @@ def clean_df_climate(url):
     elif 'Solarstrahlung' in url:
         df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'solar_radiation'}, inplace=True)
     else:
-        df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'tempreture'}, inplace=True)
+        df_climate.rename(columns={'Date (UTC)': 'datetime', 'Value': 'temprature'}, inplace=True)
 
     
     return df_climate
