@@ -1,4 +1,4 @@
-datetime,wind_speed,solar_radiation,tempreture,date,day_of_week,time,month
+datetime,wind_speed,solar_radiation,temperature,date,day_of_week,time,month
 2021-01-01 00:00:00,2.4,0,0.6,2021-01-01,Friday,00:00:00,1
 2021-01-01 01:00:00,2.3,0,0.4,2021-01-01,Friday,01:00:00,1
 2021-01-01 02:00:00,2.1,0,0.4,2021-01-01,Friday,02:00:00,1

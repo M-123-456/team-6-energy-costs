@@ -1,4 +1,4 @@
-datetime,wind_speed,solar_radiation,tempreture,date,day_of_week,time,month,nuclear_power,not_renewable,renewable,energy_price,total_energy_feeding
+datetime,wind_speed,solar_radiation,temperature,date,day_of_week,time,month,nuclear_power,not_renewable,renewable,energy_price,total_energy_feeding
 2020-01-01 00:00:00,2.4,0,-0.1,2020-01-01,Wednesday,00:00:00,1,8088.217500000001,29512.7485,14541.302,38.6,52142.268000000004
 2020-01-01 01:00:00,2.4,0,-0.5,2020-01-01,Wednesday,01:00:00,1,8081.1587500000005,29178.66275,14949.455750000001,36.55,52209.27725
 2020-01-01 02:00:00,2.5,0,-0.7,2020-01-01,Wednesday,02:00:00,1,8071.4475,29414.36225,15077.925000000001,32.32,52563.73475

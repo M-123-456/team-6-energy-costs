@@ -1,4 +1,4 @@
-datetime,wind_speed,solar_radiation,tempreture,date,day_of_week,time,month
+datetime,wind_speed,solar_radiation,temperature,date,day_of_week,time,month
 2019-01-01 00:00:00,4.5,0,6.0,2019-01-01,Tuesday,00:00:00,1
 2019-01-01 01:00:00,4.8,0,5.9,2019-01-01,Tuesday,01:00:00,1
 2019-01-01 02:00:00,5.0,0,5.9,2019-01-01,Tuesday,02:00:00,1

@@ -1,4 +1,4 @@
-datetime,wind_speed,solar_radiation,tempreture,date,day_of_week,time,month,nuclear_power,not_renewable,renewable,energy_price,total_energy_feeding
+datetime,wind_speed,solar_radiation,temperature,date,day_of_week,time,month,nuclear_power,not_renewable,renewable,energy_price,total_energy_feeding
 2021-01-01 00:00:00,2.4,0,0.6,2021-01-01,Friday,00:00:00,1,8151.29225,34932.9675,11268.678,48.19,54352.93775
 2021-01-01 01:00:00,2.3,0,0.4,2021-01-01,Friday,01:00:00,1,8156.947749999999,34955.981,10817.34625,44.68,53930.275
 2021-01-01 02:00:00,2.1,0,0.4,2021-01-01,Friday,02:00:00,1,8154.37725,35030.00525,10407.86475,42.92,53592.24725
