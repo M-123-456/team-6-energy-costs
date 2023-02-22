@@ -13,12 +13,8 @@ def combine_energy_climate(energy_data, climate_data, save_url):
    climate_data['datetime'] = pd.to_datetime(climate_data['datetime'])
 
    # resample energy_data by hour, as climate data is per hour
-   energy_data_per_hour = energy_data.resample('60min', on='datetime').agg({
-        'nuclear_power': 'mean', 
-        'not_renewable': 'mean',
-        'renewable': 'mean',
-        'energy_price': 'mean'
-    })
+   energy_data_per_hour = energy_data.resample('60min', on='datetime').mean()
+  
    energy_data_per_hour.reset_index(inplace=True)
    df_energy_climate = pd.merge(climate_data, energy_data_per_hour)
 

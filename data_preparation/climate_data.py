@@ -1,20 +1,22 @@
 import pandas as pd
 import data_preparator 
 
-def save_prep_climate_data(wind_url, solar_url, tempreture_url,  save_url):
+def save_prep_climate_data(wind_url, solar_url, temperature_url,  save_url):
     # climate data 2020
     df_wind = data_preparator.clean_df_climate(wind_url)
     df_solar = data_preparator.clean_df_climate(solar_url)
-    df_tempreture = data_preparator.clean_df_climate(tempreture_url)
+    df_tempreture = data_preparator.clean_df_climate(temperature_url)
 
     # merge wind, sun and tempreture data
     df_climate = df_wind.merge(df_solar, on='datetime')
     df_climate = df_climate.merge(df_tempreture, on='datetime')
+
     # datetime
     df_climate['datetime'] = pd.to_datetime(df_climate['datetime'])
 
-    # add month
-    df_climate['month_year'] = df_climate['datetime'].dt.to_period('M')
+    # add date, month, hour, weekdays
+    df_climate = data_preparator.add_date_week_time(df_climate)
+    df_climate['month'] = df_climate['datetime'].dt.month
 
 
     # save as csv in data folder
