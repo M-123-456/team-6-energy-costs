@@ -6,5 +6,6 @@
 - [x] Get datasets
 - [x] Data analysis for obtaining a mental model
 - [ ] Tryout several forecasting models to find out a model which suits the best to our data and goal
-- [ ] Finetune our model (eg. find hyperparameter)
+- [ ] Finetune our model (eg. find hyperparameter, use covariates)
+- [ ] Build a simulator
 - [ ] Build an ui for the simulator
