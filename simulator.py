@@ -15,7 +15,8 @@ formatted_end = end_day.strftime('%Y-%m-%d')
 st.markdown(f'Today is {today}')
 st.markdown(f'The estimation period: {formatted_start} - {formatted_end}')
 
-# on_click to be added
+# on_click to be added to start estimation
 button = st.button(
     'SHOW ESTIMATION OF NEXT WEEK'
 )
+
