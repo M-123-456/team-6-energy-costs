@@ -18,6 +18,8 @@ def combine_energy_climate(energy_data, climate_data, save_url):
    energy_data_per_hour.reset_index(inplace=True)
    df_energy_climate = pd.merge(climate_data, energy_data_per_hour)
 
+   df_energy_climate['date'] = df_energy_climate['datetime'].dt.date
+
    df_energy_climate.to_csv(save_url, index=False)
 
 combine_energy_climate(
