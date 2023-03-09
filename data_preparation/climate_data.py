@@ -14,11 +14,6 @@ def save_prep_climate_data(wind_url, solar_url, temperature_url,  save_url):
     # datetime
     df_climate['datetime'] = pd.to_datetime(df_climate['datetime'])
 
-    # add date, month, hour, weekdays
-    df_climate = data_preparator.add_date_week_time(df_climate)
-    df_climate['month'] = df_climate['datetime'].dt.month
-
-
     # save as csv in data folder
     df_climate.to_csv(
         save_url,

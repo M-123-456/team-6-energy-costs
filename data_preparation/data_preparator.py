@@ -34,13 +34,13 @@ def clean_df_energy(url):
 
     return df_energy
 
-def add_date_week_time(df):
+def add_hour_dayofweek_month(df):
     # add Date column
     df['date'] = df['datetime'].dt.date
+    # add Hour column
+    df['hour'] = df['datetime'].dt.hour
     # add weekday column
-    df['day_of_week'] = df['datetime'].dt.day_name()
-    # add time
-    df['time'] = df['datetime'].dt.time
+    df['dayofweek'] = df['datetime'].dt.dayofweek
     # add month
     df['month'] = df['datetime'].dt.month
 

@@ -6,11 +6,8 @@ def save_prep_energy_data(data_url, save_url):
     # energy data 2020 cleaning and preparation 
     df_energy = data_preparator.clean_df_energy(data_url)
 
-    # # add date, day of week and time columns
-    # df_energy = data_preparator.add_date_week_time(df_energy)
-
-    # add total energy feeding
-    df_energy['total_energy_feeding'] = df_energy['nuclear_power'] +     df_energy['not_renewable'] + df_energy['renewable']
+    # add date, day of week and time columns
+    df_energy = data_preparator.add_hour_dayofweek_month(df_energy)
 
     # datetime
     df_energy['datetime'] = pd.to_datetime(df_energy['datetime'])
