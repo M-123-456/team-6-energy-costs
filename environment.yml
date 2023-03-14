@@ -6,8 +6,8 @@ dependencies:
   - matplotlib
   - numpy
   - seaborn
-  - datetime
   - statsmodels
-  - darts
+  - scikit-learn
+  - xgboost
 
 prefix: /Users/mikigerlach/opt/anaconda3/envs/Techlabs

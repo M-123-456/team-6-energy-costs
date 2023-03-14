@@ -1,11 +1,77 @@
 # team-6-energy-costs
 
-## Our Roadmap
+## Project Description
 
-- [x] Set goal: Build a simulator to predict the best (cheapest) time to buy (renewable) energy in the nex week 
-- [x] Get datasets
-- [x] Data analysis for obtaining a mental model
-- [ ] Try out several forecasting models to find out a model which suits the best to our data and goal
-- [ ] Finetune our model (eg. find hyperparameter, use covariates)
-- [ ] Build a simulator
-- [ ] Build an ui for the simulator
+(description needed)
+
+## Table of Contents
+
+1. [Project Status](#1-project-status)
+2. [Technologies Used](#2-technologies-used)
+3. [Setup](#3-setup)
+4. [Our Achievements](#4-our-achievements)
+5. [Room for Improvement](#5-room-for-improvement)
+6. [Our Team](#6-our-team)
+7. [Acknowledgements](#7-acknowledgements)
+
+## 1. Project Status
+
+Project is: _in progress_
+The project is currently in progress and actively being developed by the team.
+
+## 2. Technologies Used
+
+**Libraries:**
+
+- Numpy
+- Pandas
+- Matplotlib
+- Seaborn
+- Statsmodels
+- Scikit Learn
+- XGBoost
+
+## 3. Setup
+
+To run this project, you need to have installed python3 on your computer([python3](https://www.python.org/downloads/)).
+Furthermore, it is helpful to install anaconda ([Anaconda](https://docs.anaconda.com/anaconda/install/index.html)).
+
+- Clone the project
+
+```
+git clone git@github.com:M-123-456/team-6-energy-costs.git
+```
+
+- Go to the project folder and run
+
+```
+conda env create -f ./environment.yml
+```
+
+- Or install libraries listed in environment.yml with `pip install`.
+
+## 4. Our Achievements
+
+1. Set goal: Build a simulator to predict the best (cheapest) time to buy energy in the nex week
+2. Get datasets with good quality
+3. Analyze data to obtain a mental model
+4. Try out several forecasting models to find out the best model for our data and goal
+5. Finetune our model using covariates
+
+## 5. Room for Improvement
+
+- [ ] Search for hyperparameters
+- [ ] Create a dashboard with ui
+
+## 6. Our Team
+
+This project is developed and maintained by a team of
+
+1. **Giulia Cancian** (Head of Operation)
+2. **Rebekka Zawanda** (Head of Communication)
+3. **Miki Gerlach**
+
+## 7. Acknowledgements
+
+- This is the project of a data science course at [Techlabs](https://techlabs.org/).
+- Many thanks to our mentor **Leonard Kunz** and Techlabs!
