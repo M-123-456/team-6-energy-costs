@@ -62,7 +62,7 @@ conda env create -f ./environment.yml
 ## 5. Room for Improvement
 
 - [ ] Search for hyperparameters
-- [ ] Create a dashboard with ui
+- [ ] Create a dashboard
 
 ## 6. Our Team
 
