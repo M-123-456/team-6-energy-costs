@@ -2,7 +2,13 @@
 
 ## Project Description
 
-(description needed)
+Our objective is to develop a model that can accurately predict energy prices one week in advance. This model will be used to provide users with information on when the best time to buy energy is.
+
+The model will use historical data on energy prices, as well as other relevant factors that may affect prices, such as weather conditions, time of year, and energy feeding volume. We used machine learning algorithms to analyze this data and identify patterns and trends that can be used to make predictions.
+
+To ensure the accuracy of our predictions, we trained the model on a large dataset of historical energy prices and tested it to evaluate its performance. We also fine-tuned the model by adjusting its hyperparameters to achieve the best possible results.
+
+Overall, our model will provide a valuable tool for energy consumers who want to make more informed decisions about their energy usage and expenditures.
 
 ## Table of Contents
 
@@ -62,7 +68,7 @@ conda env create -f ./environment.yml
 
 ## 5. Room for Improvement
 
-- [ ] Create a dashboard
+- [ ] Integrate the model into a user-friendly interface that allows users view predicted energy prices for the coming week
 
 ## 6. Our Team
 
