@@ -57,11 +57,11 @@ conda env create -f ./environment.yml
 3. Analyze data to obtain a mental model (ref: [analysis](./analysis.ipynb))
 4. Try out several forecasting models to find out the best model for our data and goal
 5. Create our model (ref: [model](./DEIN_DATEINAME.ipynb))
-6. Finetune our model using covariates
+6. Search for hyperparameters
+7. Finetune our model using covariates
 
 ## 5. Room for Improvement
 
-- [ ] Search for hyperparameters
 - [ ] Create a dashboard
 
 ## 6. Our Team
